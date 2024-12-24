@@ -369,7 +369,7 @@ h2 span {
     .message {
         font-size: 20px;
         /* Reduced font size for mobile */
-        flex-direction: column;
+        flex-direction: row;
         /* Stack elements for small screens */
         gap: 5px;
     }
@@ -398,12 +398,15 @@ h2 span {
 
     .christmas-tree {
         position: absolute;
-        bottom: 75px;
+        bottom: 8%;
         left: 0;
 
     }
 
     .christmas-tree img {
+        left: 10%;
+        bottom: 0;
+        position: absolute;
         width: 100px;
         height: 100px;
     }
