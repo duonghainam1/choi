@@ -1,0 +1,418 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #0c1e3a;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.snowflake {
+    position: absolute;
+    top: -50px;
+    color: white;
+    opacity: 0.8;
+    animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.message {
+    font-size: 24px;
+    /* Reduced for better mobile display */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    /* Stacking for mobile */
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.message span,
+.message div span {
+    --i: 0;
+    display: inline-block;
+    animation: bounce 1.5s infinite ease-in-out;
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+.message div span:nth-child(1) {
+    --i: 1;
+    color: #ff0000;
+}
+
+.message div span:nth-child(2) {
+    --i: 2;
+    color: #ffa500;
+}
+
+.message div span:nth-child(3) {
+    --i: 3;
+    color: #ffff00;
+}
+
+.message div span:nth-child(4) {
+    --i: 4;
+    color: #008000;
+}
+
+.message div span:nth-child(5) {
+    --i: 5;
+    color: #0000ff;
+}
+
+.message div span:nth-child(6) {
+    --i: 6;
+    color: #4b0082;
+}
+
+.message div span:nth-child(7) {
+    --i: 7;
+    color: #ee82ee;
+}
+
+.message div span:nth-child(8) {
+    --i: 8;
+    color: #ff1493;
+}
+
+.message div span:nth-child(9) {
+    --i: 9;
+    color: #00ced1;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.christmas-letter {
+    display: none;
+    background-color: #f4e1b2;
+    color: #0c1e3a;
+    padding: 20px;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 350px;
+    /* Reduced width for mobile */
+    text-align: center;
+    font-size: 16px;
+    /* Smaller font for mobile */
+    border: 3px solid #0c1e3a;
+    background: #fff3e0;
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom, #f9f9f9 0%, #f4e1b2 100%);
+    transition: transform 2s ease-out, opacity 2s ease-out;
+}
+
+.christmas-letter.open {
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+h2 {
+    font-size: 20px;
+    /* Reduced font size for mobile */
+    text-align: center;
+    font-weight: bold;
+}
+
+h2 span {
+    display: inline-block;
+    font-size: 20px;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+.char-1 {
+    animation-delay: 0s;
+    color: #ff1493;
+}
+
+.char-2 {
+    animation-delay: 0.1s;
+    color: #ff4500;
+}
+
+.char-3 {
+    animation-delay: 0.2s;
+    color: #ffa500;
+}
+
+.char-4 {
+    animation-delay: 0.3s;
+    color: #a3a302;
+}
+
+.char-5 {
+    animation-delay: 0.4s;
+    color: #008000;
+}
+
+.char-6 {
+    animation-delay: 0.5s;
+    color: #0000ff;
+}
+
+.char-7 {
+    animation-delay: 0.6s;
+    color: #4b0082;
+}
+
+.char-8 {
+    animation-delay: 0.7s;
+    color: #ee82ee;
+}
+
+.char-9 {
+    animation-delay: 0.8s;
+    color: #ff1493;
+}
+
+.char-10 {
+    animation-delay: 0.9s;
+    color: #00ced1;
+}
+
+.char-11 {
+    animation-delay: 1s;
+    color: #ff6347;
+}
+
+.char-12 {
+    animation-delay: 1.1s;
+    color: #ff00ff;
+}
+
+.char-13 {
+    animation-delay: 1.2s;
+    color: #ca08ad;
+}
+
+.char-14 {
+    animation-delay: 1.3s;
+    color: #008080;
+}
+
+.char-15 {
+    animation-delay: 1.4s;
+    color: #dc143c;
+}
+
+.char-16 {
+    animation-delay: 1.5s;
+    color: #4169e1;
+}
+
+.char-17 {
+    animation-delay: 1.6s;
+    color: #ff4500;
+}
+
+.char-18 {
+    animation-delay: 1.7s;
+    color: #f08080;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.christmas-letter p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    /* Reduced padding */
+    transform: translate(-50%, -50%);
+    animation: shakeSanta 0.5s infinite alternate;
+}
+
+.close-btn {
+    position: absolute;
+    border: none;
+    padding: 8px 16px;
+    /* Reduced padding */
+    top: 5px;
+    right: 5px;
+    font-size: 14px;
+    /* Smaller font size */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.close-btn:hover {
+    background-color: #ff69b4;
+    color: white;
+}
+
+.christmas-tree {
+    position: absolute;
+    left: -5%;
+    bottom: 0;
+    animation: shakeTree 0.5s infinite alternate;
+    transform-origin: bottom center;
+    width: 70%;
+    /* Adjusted for mobile */
+}
+
+@keyframes shakeTree {
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+.ong_gia_noel {
+    position: absolute;
+    bottom: -130px;
+    right: -15%;
+    animation: shakeSanta 0.5s infinite alternate;
+}
+
+@keyframes shakeSanta {
+    0% {
+        transform: translate(-50%, -50%) rotate(-5deg);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(5deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-5deg);
+    }
+}
+
+.gift-box {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: showGift 2s forwards, shakeSanta 0.5s infinite alternate;
+    z-index: 10;
+}
+
+.gift-box img {
+    width: 90px;
+    /* Smaller image size for mobile */
+    height: 90px;
+}
+
+@keyframes showGift {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media Queries for mobile phones */
+@media (max-width: 480px) {
+    .message {
+        font-size: 20px;
+        /* Reduced font size for mobile */
+        flex-direction: column;
+        /* Stack elements for small screens */
+        gap: 5px;
+    }
+
+    .btn {
+        padding: 7px 15px;
+        /* Smaller button */
+    }
+
+    .close-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+        /* Smaller font */
+    }
+
+    .gift-box img {
+        width: 110px;
+        /* Smaller image for mobile */
+        height: 110px;
+    }
+
+    h2 {
+        font-size: 18px;
+        /* Smaller heading */
+    }
+
+    .christmas-tree {
+        bottom: 75px;
+        /* Smaller tree for mobile */
+    }
+
+    .christmas-tree img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .ong_gia_noel {
+        bottom: 0;
+        right: -12%;
+    }
+
+    .ong_gia_noel img {
+        width: 120px;
+        height: 120px;
+    }
+}
