@@ -293,7 +293,7 @@ h2 span {
 
 .christmas-tree {
     position: absolute;
-    left: -5%;
+    left: -30%;
     bottom: 0;
     animation: shakeTree 0.5s infinite alternate;
     transform-origin: bottom center;
@@ -397,8 +397,10 @@ h2 span {
     }
 
     .christmas-tree {
+        position: absolute;
         bottom: 75px;
-        /* Smaller tree for mobile */
+        left: 0;
+
     }
 
     .christmas-tree img {
